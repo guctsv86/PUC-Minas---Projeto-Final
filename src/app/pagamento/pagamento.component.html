@@ -1,0 +1,15 @@
+<div class="pagamento-container">
+    <h2>Pagamento</h2>
+    
+    <label for="metodo">Método de Pagamento:</label>
+    <select id="metodo" [(ngModel)]="metodoPagamento">
+      <option value="cartao">Cartão de Crédito</option>
+      <option value="boleto">Boleto Bancário</option>
+      <option value="pix">PIX</option>
+    </select>
+  
+    <label for="valor">Valor Total:</label>
+    <input type="number" id="valor" [(ngModel)]="valor" />
+  
+    <button (click)="confirmarPagamento()">Confirmar Pagamento</button>
+  </div>

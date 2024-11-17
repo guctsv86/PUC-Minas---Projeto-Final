@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="logo">
+    <h1>Próxima Parada</h1>
+  </div>
+
+  <!-- Barra de navegação principal -->
+  <ul class="nav-links" *ngIf="isMainNavigation">
+    <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/sobre" routerLinkActive="active">Sobre</a></li>
+    <li><a routerLink="/ajuda" routerLinkActive="active">Ajuda</a></li>
+  </ul>
+
+  <!-- Barra de navegação do processo de compra -->
+  <ul class="nav-links" *ngIf="!isMainNavigation">
+    <li><a routerLink="/roteiros" routerLinkActive="active">Selecionar Roteiro</a></li>
+    <li><a routerLink="/assentos" routerLinkActive="active">Escolher Assento</a></li>
+    <li><a routerLink="/pagamento" routerLinkActive="active">Pagamento</a></li>
+  </ul>
+
+  <div class="menu-toggle" id="mobile-menu" #mobileMenu>
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
+

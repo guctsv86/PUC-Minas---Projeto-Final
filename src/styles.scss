@@ -1,0 +1,75 @@
+// Variáveis para cores
+$primary-color: #333;
+$hover-color: #4CAF50;
+$text-color: white;
+
+// Estilos da barra de navegação
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 10px 20px;
+
+  .logo {
+    h1 {
+      color: $text-color;
+      font-size: 24px;
+      margin: 0;
+    }
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+      font-size: 18px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: $text-color;
+    }
+  }
+}
+
+// Responsividade para dispositivos móveis
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+

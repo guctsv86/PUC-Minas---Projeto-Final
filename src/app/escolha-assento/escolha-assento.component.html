@@ -1,0 +1,15 @@
+<div *ngIf="loading">Carregando assentos...</div>
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+<div *ngIf="!loading && !errorMessage">
+  <h3>Escolha seu assento</h3>
+  <div class="assentos">
+    <div *ngFor="let assento of assentos; let i = index" 
+         [class.selecionado]="assento.selecionado" 
+         [class.indisponivel]="!assento.disponivel" 
+         (click)="assento.disponivel ? selecionarAssento(i) : null">
+      {{ assento.numero }}
+    </div>
+  </div>
+  <button (click)="confirmarEscolha()">Confirmar Escolha</button>
+</div>

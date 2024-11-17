@@ -1,0 +1,96 @@
+/* Estilos para a barra de navegação principal */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo h1 {
+    color: white;
+    font-size: 24px;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #4caf50;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+  }
+}
+
+/* Barra de navegação para as páginas de compra */
+.navbar-compra {
+  background-color: #4caf50;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo h1 {
+    color: white;
+    font-size: 24px;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #333;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+  }
+}
+

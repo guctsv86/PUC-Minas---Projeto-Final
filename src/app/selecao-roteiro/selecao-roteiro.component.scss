@@ -1,0 +1,45 @@
+/* Estilos para a seleção de roteiro */
+div {
+  padding: 20px;
+  background-color: #f9f9f9; /* Cor de fundo leve */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+
+  &:hover {
+    background-color: #f1f1f1; /* Cor de fundo ao passar o mouse */
+    cursor: pointer;
+  }
+
+  &.preco {
+    font-weight: bold;
+    color: #4CAF50; /* Cor para o preço */
+  }
+}
+
+li .preco {
+  color: #4CAF50; /* Cor verde para preço */
+  font-weight: bold;
+}

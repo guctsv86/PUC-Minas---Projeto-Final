@@ -1,0 +1,8 @@
+<div>
+  <h2>Seleção de Roteiro</h2>
+  <ul>
+    <li *ngFor="let roteiro of roteiros">
+      {{ roteiro.origem }} → {{ roteiro.destino }}: R$ {{ roteiro.preco }}
+    </li>
+  </ul>
+</div>
