@@ -1,8 +1,46 @@
-<div>
+<div class="roteiro-container">
   <h2>Seleção de Roteiro</h2>
-  <ul>
-    <li *ngFor="let roteiro of roteiros">
-      {{ roteiro.origem }} → {{ roteiro.destino }}: R$ {{ roteiro.preco }}
+
+  <form (ngSubmit)="onSubmit()" *ngIf="!isLoading">
+    <label for="origem">Origem:</label>
+    <input
+      type="text"
+      id="origem"
+      [(ngModel)]="rota.origem"
+      name="origem"
+      required
+    />
+
+    <label for="destino">Destino:</label>
+    <input
+      type="text"
+      id="destino"
+      [(ngModel)]="rota.destino"
+      name="destino"
+      required
+    />
+
+    <label for="data">Data da Viagem:</label>
+    <input
+      type="date"
+      id="data"
+      [(ngModel)]="rota.data"
+      name="data"
+      required
+    />
+
+    <button type="submit" [disabled]="!validarFormulario()">Buscar Rota</button>
+  </form>
+
+  <div *ngIf="isLoading">Carregando roteiros...</div>
+
+  <div *ngIf="errorMessage && !isLoading" class="error">{{ errorMessage }}</div>
+  <div *ngIf="noDataMessage && !isLoading" class="no-data">{{ noDataMessage }}</div>
+
+  <ul *ngIf="roteiros.length > 0">
+    <li *ngFor="let roteiro of roteiros" class="roteiro-item">
+      {{ roteiro.origem }} → {{ roteiro.destino }}: {{ roteiro.data | date: 'short' }}
+      <button (click)="escolherRoteiro(roteiro._id)">Escolher</button>
     </li>
   </ul>
 </div>
